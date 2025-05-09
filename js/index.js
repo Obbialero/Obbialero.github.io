@@ -34,7 +34,12 @@ document.querySelectorAll('.cert-image').forEach(img => {
   img.addEventListener('click', () => {
     modalImage.src = img.src;
     modalDescription.textContent = img.dataset.description;
-    modalDownload.href = img.src;
+
+    // Usa il nome del file PNG per ricavare il path PDF
+    modalDownload.href = img.src
+    .replace('assets/img/attestati/', 'assets/pdf/')
+    .replace('.png', '.pdf');
+
     modal.classList.remove('hidden');
   });
 });
@@ -55,6 +60,7 @@ modal.addEventListener('click', (e) => {
     modal.classList.add('hidden');
   }
 });
+
 
 // Carosello progetti
 document.addEventListener('DOMContentLoaded', () => {
