@@ -1,0 +1,14 @@
+{
+  "messaggio_iniziale": "Ciao! Sono Andrea Obbialero, un Junior Hardware Engineer appassionato di elettronica e veicoli autonomi.",
+  "ciao": "Ciao! Come posso aiutarti?",
+  "come stai": "Sto bene, grazie! E tu?",
+  "grazie": "È un piacere aiutarti! Chiedi pure se hai altre domande.",
+  "addio": "A presto! Buona giornata!",
+  "certificazioni": "Ho alcune certificazioni come 'PCB Design Essentials' e un corso in 'Sicurezza Informatica'.",
+  "eta": "Ho 22 anni, sono nato nel 2002.",
+  "aziende": "Lavoro in ALBA Robot dal 2021 come Hardware Menager, e ho fatto uno stage in IDG 01 S.p.A. nel 2018.",
+  "competenze": "Progetto circuiti, analizzo datasheet, uso software come AutoCAD, Eagle, LabView, e gestisco progetti hardware.",
+  "software": "Uso software come EasyEDA, AutoCAD, Eagle, Multisim, LabView, e altri per progettazione e simulazione.",
+  "formazione": "Ho il diploma in elettronica ed elettrotecnica e corsi su Project Management e sicurezza informatica.",
+  "certificazione":"<br><br>Clicca il seguente link: <a href='#certificazioni'><u>Certificazioni</u></a>"
+}

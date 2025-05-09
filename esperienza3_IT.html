@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progetti - Andrea Obbialero</title>
+
+  <!-- Tailwind CSS & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS personalizzato -->
+  <link rel="stylesheet" href="css/esperienza3_IT.css" />
+  <link rel="stylesheet" href="chat/style.css" />
+</head>
+
+<body class="bg-gray-950 text-white">
+  <!-- Navbar -->
+  <header class="fixed w-full z-20 bg-gray-950 bg-opacity-90 backdrop-blur-sm shadow-sm" role="banner">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="assets/img/LOGO2.png" alt="Logo AO" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
+        <h1 class="text-xl font-bold" data-translate="Navbar">Andrea Obbialero</h1>
+      </div>
+      <nav class="hidden md:flex items-center space-x-4 text-sm" role="navigation">
+        <a href="../assets/pdf/CV_Andrea_Obbialero.pdf" download class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded">
+          Scarica CV
+        </a>
+        <select id="languageSelect" class="bg-transparent text-blue-400 border border-blue-400 rounded px-2 py-1">
+          <option value="it">IT</option>
+          <option value="en">EN</option>
+        </select>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="md:hidden text-blue-400 focus:outline-none" aria-expanded="false" aria-label="Apri menu">
+        ☰
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white px-4 pb-4 space-y-2" role="navigation">
+      <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded" data-translate="downloadCV">Visualizza CV</a>
+      <select id="languageSelectMobile" class="bg-gray-800 text-blue-400 border border-blue-400 rounded px-2 py-1 w-full">
+        <option value="it">IT</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Contenuto principale -->
+  <main class="pt-32 container mx-auto px-4 py-12">
+    <!-- Contenuto in arrivo -->
+    <div class="text-center text-gray-300 text-xl mt-24">
+      <p>🚧 Sezione in aggiornamento...</p>
+      <p class="mt-4">Torna presto per scoprire il nuovo progetto!</p>
+    </div>
+
+  <!-- Chat snippet -->
+  <div id="chat-icon">
+    💬
+    <div id="notification-dot" class="hidden"></div> <!-- Pallino rosso -->
+  </div>
+
+  <!-- Chatbox -->
+  <div id="chatbox" class="hidden" style="color: black;">
+    <div id="chat-messages"></div>
+    <div id="chat-input">
+      <input type="text" id="user-input" placeholder="Scrivi qualcosa...">
+      <button id="send-btn" style="color: rgb(30, 255, 0);" data-translate="invio">Invia</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-400 bg-gray-950 text-sm flex items-center justify-center gap-3">
+    <img src="assets/img/LOGO2.png" alt="Logo AO" class="w-6 h-6 object-contain" />
+    © 2025 Andrea Obbialero – Junior Hardware Engineer. Tutti i diritti riservati.
+  </footer>
+
+  <!-- Script -->
+  <script src="js/esperienza3_IT.js"></script>
+  <script src="chat/script.js"></script>
+</body>
+
+</html>

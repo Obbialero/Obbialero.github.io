@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="title">Andrea Obbialero – Soluzioni Digitali</title>
+  <meta name="description" content="Sviluppo Web, Consulenza IT e molto altro." />
+
+  <!-- Tailwind CSS, font Inter, AOS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS personalizzato -->
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="chat/style.css" />
+</head>
+
+<body class="bg-gray-950 text-white">
+  <!-- Sfondo fisso -->
+  <div class="fixed inset-0 -z-10 flex items-center justify-center pointer-events-none">
+    <img src="assets/img/LOGO2.png" class="w-1/2 h-auto opacity-100 blur-sm" alt="Logo sfondo">
+  </div>
+
+  <!-- Navbar -->
+  <header class="fixed w-full z-30 bg-gray-950 bg-opacity-95 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="assets/img/LOGO2.png" alt="Logo AO" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
+        <h1 class="text-xl font-bold" data-translate="Navbar">Andrea Obbialero</h1>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm items-center">
+        <a href="#home" class="hover:text-blue-400" data-translate="home">Home</a>
+        <a href="#about" class="hover:text-blue-400" data-translate="about">Chi Sono</a>
+        <a href="#skills" class="hover:text-blue-400" data-translate="skills">Skills</a>
+        <a href="#education" class="hover:text-blue-400" data-translate="study">Formazione</a>
+        <a href="#experience" class="hover:text-blue-400" data-translate="experience">Esperienze</a>
+        <a href="#projects" class="hover:text-blue-400" data-translate="project">Progetti</a>
+        <a href="#certificazioni" class="hover:text-blue-400" data-translate="certification">Certificazioni</a>
+        <a href="#contact" class="hover:text-blue-400" data-translate="contact">Contatti</a>
+        <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded" data-translate="downloadCV">Visualizza CV</a>
+        <select id="languageSelect" class="bg-transparent text-blue-400 border border-blue-400 rounded px-3 py-2">
+          <option value="it">IT</option>
+          <option value="en">EN</option>
+        </select>
+      </nav>
+      <button id="menu-toggle" class="md:hidden text-blue-400" aria-label="Apri menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center px-4 pt-24 text-center overflow-hidden" data-aos="fade-up">
+    <div class="relative z-10">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-white" data-translate="hero1">
+        Progettazione Elettronica e Innovazione Tecnologica
+      </h2>
+      <p class="text-lg text-gray-300 mb-8" data-translate="hero2">
+        Junior Hardware Engineer, PCB Design e Tecnologie Embedded
+      </p>
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-6 px-10 rounded-xl" data-translate="hero3">
+        Contattami
+      </a>
+    </div>
+  </section>
+
+  <!-- Chi Sono -->
+  <section id="about" class="py-20 bg-gray-900" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4">
+      <img src="assets/img/test2.jpg" alt="Foto profilo" class="w-52 h-52 rounded-full object-cover shadow-lg" />
+      <div>
+        <h3 class="text-3xl font-bold mb-4" data-translate="sectuion">Chi Sono</h3>
+        <p class="text-gray-300 leading-relaxed" data-translate="description">
+          Sono un Junior Hardware Engineer appassionato di elettronica, con esperienza nella progettazione e
+          realizzazione di circuiti stampati per veicoli a guida autonoma indoor.
+          Seguo l’intero processo elettrico, dalla selezione dei sensori all’integrazione dei motori fino alla consegna
+          del prodotto finito.
+          Sono preciso, metodico e con una forte attitudine al problem solving e al lavoro di squadra.
+          Utilizzo con padronanza software CAD avanzati (come EasyEDA, Eagle e Fusion 360) e mi occupo anche della
+          documentazione tecnica.
+          Nel tempo libero pratico nuoto, snowboard e sono donatore di sangue. Cerco costantemente nuove sfide
+          professionali per crescere e contribuire all’innovazione.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chat snippet -->
+  <div id="chat-icon">
+    💬
+    <div id="notification-dot" class="hidden"></div> <!-- Pallino rosso -->
+  </div>
+
+  <!-- Chatbox -->
+  <div id="chatbox" class="hidden" style="color: black;">
+    <div id="chat-messages"></div>
+    <div id="chat-input">
+      <input type="text" id="user-input" placeholder="Scrivi qualcosa...">
+      <button id="send-btn" style="color: rgb(30, 255, 0);" data-translate="invio">Invia</button>
+    </div>
+  </div>
+  
+  <!-- Competenze Tecniche -->
+  <section id="skills" class="py-20 bg-gray-950 text-white" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10" data-translate="competenze">💻 Competenze Tecniche</h3>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+
+        <a href="https://easyeda.com" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/easyeda.png" alt="EasyEDA" class="w-6 h-6">
+          EasyEDA
+        </a>
+
+        <a href="https://www.autodesk.com/products/eagle/overview" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="https://img.icons8.com/color/48/autodesk.png" alt="Eagle" class="w-6 h-6">
+          Eagle PCB
+        </a>
+
+        <a href="https://www.autodesk.com/products/fusion-360/overview" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/fusion_360.png" alt="Fusion 360" class="w-6 h-6">
+          Fusion 360
+        </a>
+
+        <a href="https://www.ni.com/it-it/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html"
+          target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/multisim.png" alt="Multisim" class="w-6 h-6">
+          Multisim
+        </a>
+
+        <a href="https://www.ni.com/it-it/shop/labview.html" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="https://img.icons8.com/fluency/48/workflow.png" alt="LabView" class="w-6 h-6">
+          LabView
+        </a>
+
+        <a href="https://www.ganttproject.biz/" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="https://img.icons8.com/color/48/project.png" alt="GanttProject" class="w-6 h-6">
+          GanttProject
+        </a>
+
+        <a href="https://www.microsoft.com/windows" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="https://img.icons8.com/color/48/windows-11.png" alt="Windows" class="w-6 h-6">
+          Windows
+        </a>
+
+        <a href="https://www.kernel.org/" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="https://img.icons8.com/color/48/linux--v1.png" alt="Linux" class="w-6 h-6">
+          Linux
+        </a>
+
+        <a href="https://www.kicad.org/download/" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/kicad.png" alt="kicad" class="w-6 h-6">
+          kicad
+        </a>
+
+        <a href="https://www.st.com/content/st_com/en.html" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/ST.png" alt="STM" class="w-6 h-6">
+          STM
+        </a>
+
+        <a href="https://www.arduino.cc" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/Arduino.png" alt="Arduino" class="w-6 h-6">
+          Arduino
+        </a>
+
+        <a href="https://www.olimex.com" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/OLIMEX.png" alt="OLIMEX" class="w-6 h-6">
+          OLIMEX
+        </a>
+
+        <a href="https://www.blender.org" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/blender.png" alt="BLENDER" class="w-6 h-6">
+          BLENDER
+        </a>
+
+        <a href="https://www.office.com" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/office.png" alt="Office" class="w-6 h-6">
+          Office
+        </a>
+
+        <a href="https://www.sistemi.com/software-gestionali/esolver/" target="_blank"
+          class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
+          <img src="assets/img/eSOLVER.png" alt="eSOLVER" class="w-6 h-6">
+          eSOLVER
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Formazione -->
+  <section id="education" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <h3 class="text-3xl font-bold mb-10" data-translate="formazione">🎓 Formazione Accademica</h3>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col md:flex-row gap-6 items-start text-left">
+        <div class="flex-1 space-y-2">
+          <h4 class="text-xl font-semibold text-blue-400" data-translate="diploma">Diploma in Elettronica ed Elettrotecnica</h4>
+          <p><strong data-translate="istituto">Istituto:</strong>
+            <a href="https://agnelli.it" class="text-blue-400 underline" target="_blank" data-translate="agnelli">Istituto Internazionale Edoardo Agnelli</a>
+          </p>
+          <p><strong data-translate="anno">Anno:</strong> 2016–2021</p>
+          <p><strong data-translate="voto">Voto:</strong> 80/100</p>
+        </div>
+        <div class="w-40 h-40 flex-shrink-0">
+          <img src="assets/img/logoAGNELLI.png" alt="Logo Agnelli" class="w-full h-full object-contain rounded-md" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Esperienze -->
+  <section id="experience" class="py-20 bg-gray-950 text-white" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10" data-translate="experienceTitle">💼 Esperienze Lavorative</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer"
+          onclick="window.open('esperienza1_IT.html','_blank')">
+          <img src="assets/img/IDG01.png" alt="IDG01" class="w-full h-48 object-contain rounded mb-4" />
+          <h4 class="text-lg font-semibold" data-translate="idg">IDG01 – Robotica Indoor</h4>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer"
+          onclick="window.open('esperienza2_IT.html','_blank')">
+          <img src="assets/img/ALBAROBOT.png" alt="ALBA Robot" class="w-full h-48 object-contain rounded mb-4" />
+          <h4 class="text-lg font-semibold" data-translate="alba">ALBA Robot – Progettazione</h4>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer"
+          onclick="window.open('esperienza3_IT.html','_blank')">
+          <img src="assets/img/cooming_soon.png" alt="In Arrivo" class="w-full h-48 object-contain rounded mb-4" />
+          <h4 class="text-lg font-semibold" data-translate="arrivo">In Arrivo…</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progetti -->
+  <div id="projects" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4 relative overflow-hidden">
+      <h3 class="text-3xl font-bold text-center mb-10">📦 Progetti</h3>
+
+      <button id="project-prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-white text-3xl z-20">
+        ‹
+      </button>
+      <button id="project-next" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-3xl z-20">
+        ›
+      </button>
+
+      <div class="project-carousel-track flex transition-transform duration-500">
+        <div class="project-slide flex-shrink-0 w-full px-4">
+          <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+            <div class="carousel-wrapper relative overflow-hidden">
+              <div class="carousel-track flex transition-transform duration-500">
+                <div class="carousel-item flex-shrink-0 w-full">
+                  <img src="https://picsum.photos/400/200?random=6" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-dots flex justify-center mt-2"></div>
+            <div class="px-6 py-5">
+              <h4 class="text-xl font-semibold mb-2" data-translate="progetto1">Alimentatore 0–30 V</h4>
+              <a href="https://github.com/Obbialero/Adjustable-bench-power-supply-0V-30V" target="_blank"
+                class="inline-flex items-center text-blue-400 hover:underline">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                  class="w-5 h-5 mr-2" data-translate="gith1">
+                Visualizza su GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-slide flex-shrink-0 w-full px-4">
+          <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+            <div class="carousel-wrapper relative overflow-hidden">
+              <div class="carousel-track flex transition-transform duration-500">
+                <div class="carousel-item flex-shrink-0 w-full">
+                  <img src="https://picsum.photos/400/200?random=9" alt="">
+                </div>
+                <div class="carousel-item flex-shrink-0 w-full">
+                  <img src="https://picsum.photos/400/200?random=1" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-dots flex justify-center mt-2"></div>
+            <div class="px-6 py-5">
+              <h4 class="text-xl font-semibold mb-2" data-translate="progetto1">Stazione Meteo IoT</h4>
+              <a href="https://github.com/Obbialero/IoT-Weather-Station-with-STM32L432KC" target="_blank"
+                class="inline-flex items-center text-blue-400 hover:underline">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                  class="w-5 h-5 mr-2" data-translate="gith2">
+                Visualizza su GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-slide flex-shrink-0 w-full px-4">
+          <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+            <div class="carousel-wrapper relative overflow-hidden">
+              <div class="carousel-track flex transition-transform duration-500">
+                <div class="carousel-item flex-shrink-0 w-full">
+                  <img src="https://picsum.photos/400/200?random=7" alt="">
+                </div>
+                <div class="carousel-item flex-shrink-0 w-full">
+                  <img src="https://picsum.photos/400/200?random=8" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-dots flex justify-center mt-2"></div>
+            <div class="px-6 py-5">
+              <h4 class="text-xl font-semibold mb-2" data-translate="progetto1">Modulo Telemetria ESP32</h4>
+              <a href="https://github.com/Obbialero/BLE-WIFI-Telemetry-module-with-ESP32-S2" target="_blank"
+                class="inline-flex items-center text-blue-400 hover:underline">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                  class="w-5 h-5 mr-2" data-translate="gith3">
+                Visualizza su GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-slide flex-shrink-0 w-full px-4">
+          <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+            <div class="carousel-wrapper relative overflow-hidden">
+              <div class="carousel-track flex transition-transform duration-500">
+                <div class="carousel-item flex-shrink-0 w-full">
+                  <img src="https://picsum.photos/400/200?random=13" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-dots flex justify-center mt-2"></div>
+            <div class="px-6 py-5">
+              <h4 class="text-xl font-semibold mb-2" data-translate="progetto1">Stampante 3D Custom</h4>
+              <a href="https://github.com/Obbialero/Custom-FDM-3D-Printer" target="_blank"
+                class="inline-flex items-center text-blue-400 hover:underline">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                  class="w-5 h-5 mr-2" data-translate="gith4">
+                Visualizza su GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Certificazioni -->
+<section id="certificazioni" class="py-28 bg-gray-950 text-white" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-16" data-translate="certificazioni">🏅 Certificazioni</h3>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+
+      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+        <img src="assets/img/attestati/Introduzione alla sicurezza informatica.png" alt="Sicurezza Informatica"
+          class="w-full h-48 object-cover cert-image"
+          data-description="Corso di Sicurezza Informatica, Competenze in protezione e monitoraggio dei sistemi informatici." />
+        <div class="p-4 text-center font-semibold" data-translate="certificato1">Sicurezza Informatica</div>
+      </div>
+
+      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+        <img src="assets/img/attestati/Excel e Power Query.png" alt="Excel & Power Query"
+          class="w-full h-48 object-cover cert-image"
+          data-description="Corso Excel e Power Query per la Data Analysis completato nel 2025." />
+        <div class="p-4 text-center font-semibold">Excel & Power Query</div>
+      </div>
+
+      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+        <img src="assets/img/attestati/Google Ads for beginners.png" alt="Google Ads Basics"
+          class="w-full h-48 object-cover cert-image"
+          data-description="Google Ads for Beginners su Coursera. Completato nel 2025." />
+        <div class="p-4 text-center font-semibold">Google Ads Basics</div>
+      </div>
+
+      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+        <img src="assets/img/attestati/Build a free website with WordPress.png" alt="WordPress Website"
+          class="w-full h-48 object-cover cert-image"
+          data-description="Build a Free Website with WordPress. Corso Coursera 2025." />
+        <div class="p-4 text-center font-semibold">WordPress Website</div>
+      </div>
+
+      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+        <img src="assets/img/attestati/Fondamenti di Modellazione 3D.png" alt="Modellazione 3D"
+          class="w-full h-48 object-cover cert-image"
+          data-description="Corso Fondamenti di Modellazione 3D, concluso nel 2025." />
+        <div class="p-4 text-center font-semibold" data-translate="certificato5">Modellazione 3D</div>
+      </div>
+
+      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+        <img src="assets/img/attestati/PCB Design.png" alt="PCB Design – Mahara"
+          class="w-full h-48 object-cover cert-image"
+          data-description="PCB Design Essentials, Mahara-Tech, 03/04/2025." />
+        <div class="p-4 text-center font-semibold">PCB Design – Mahara</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modale Certificati -->
+<div id="certModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+  <div class="bg-gray-900 rounded-lg p-6 relative max-w-lg w-full">
+    <button id="modalClose" class="absolute top-2 right-2 text-white text-xl font-bold">&times;</button>
+    <img id="modalImage" src="" alt="Certificato" class="w-full mb-4 rounded" />
+    <p id="modalDescription" class="text-white mb-4"></p>
+    <div class="flex justify-center">
+      <a id="modalDownload" href="#" download class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded">
+        Scarica
+      </a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Contatti -->
+  <section id="contact" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-4">
+      <!-- Form di contatto -->
+      <form action="https://formspree.io/f/xgvajwnv" method="POST" class="space-y-4">
+        <h3 class="text-3xl font-bold" data-translate="contactTitle">Contattami</h3>
+        <input type="text" name="name" placeholder="Nome" required class="w-full bg-gray-800 p-3 rounded text-white">
+        <input type="email" name="email" placeholder="Email" required class="w-full bg-gray-800 p-3 rounded text-white">
+        <textarea name="message" rows="5" placeholder="Messaggio..." required class="w-full bg-gray-800 p-3 rounded text-white"></textarea>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white py-3 px-6 rounded w-full" data-translate="send">Invia</button>
+      </form>
+
+      <!-- Social + mappa -->
+      <div class="flex flex-col items-center space-y-6">
+        <div class="flex gap-6">
+          <a href="mailto:obbialeroandrea@gmail.com" class="socialContainer containerOne" title="Email" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/envelope.svg"
+              alt="Email" class="socialSvg w-6 h-6" />
+          </a>
+          <a href="https://wa.me/3397058494" class="socialContainer containerFour" title="WhatsApp" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/brands/whatsapp.svg"
+              alt="WhatsApp" class="socialSvg w-6 h-6" />
+          </a>
+          <a href="https://github.com/Obbialero" class="socialContainer containerTwo" title="GitHub" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/brands/github.svg"
+              alt="GitHub" class="socialSvg w-6 h-6" />
+          </a>
+          <a href="https://linkedin.com/in/andrea-obbialero-713552217" class="socialContainer containerThree" title="LinkedIn" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/brands/linkedin.svg"
+              alt="LinkedIn" class="socialSvg w-6 h-6" />
+          </a>
+        </div>
+        <div id="map" class="w-full h-72 rounded shadow-lg"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-400 bg-gray-900 text-sm flex items-center justify-center gap-3">
+    <img src="assets/img/LOGO2.png" alt="Logo AO" class="w-6 h-6 object-contain" />
+    © 2025 Andrea Obbialero – Junior Hardware Engineer. Tutti i diritti riservati.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8W0FzD0feDBJpQbDKGOlOoHqAoTlOauY&callback=initMap"></script>
+  <script src="js/index.js"></script>
+  <script src="chat/script.js"></script>
+</body>
+</html>

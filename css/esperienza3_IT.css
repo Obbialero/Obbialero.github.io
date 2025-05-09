@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Placeholder per contenuti futuri */
+  main p {
+    font-size: 1.125rem;
+    color: #d1d5db;
+  }
+  

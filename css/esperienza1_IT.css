@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Card Skills */
+  .skill-card {
+    background-color: #1f2937;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .skill-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  .skill-card p {
+    color: #d1d5db;
+  }
+  
