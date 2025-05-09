@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title data-translate="title">Andrea Obbialero – Soluzioni Digitali</title>
   <meta name="description" content="Sviluppo Web, Consulenza IT e molto altro." />
 
@@ -46,6 +46,17 @@
         </select>
       </nav>
       <button id="menu-toggle" class="md:hidden text-blue-400" aria-label="Apri menu">☰</button>
+      <nav id="mobile-menu" class="md:hidden fixed top-16 left-0 right-0 bg-gray-900 flex flex-col items-center gap-4 py-4 hidden z-40">
+        <a href="#home" class="hover:text-blue-400" data-translate="home">Home</a>
+        <a href="#about" class="hover:text-blue-400" data-translate="about">Chi Sono</a>
+        <a href="#skills" class="hover:text-blue-400" data-translate="skills">Skills</a>
+        <a href="#education" class="hover:text-blue-400" data-translate="study">Formazione</a>
+        <a href="#experience" class="hover:text-blue-400" data-translate="experience">Esperienze</a>
+        <a href="#projects" class="hover:text-blue-400" data-translate="project">Progetti</a>
+        <a href="#certificazioni" class="hover:text-blue-400" data-translate="certification">Certificazioni</a>
+        <a href="#contact" class="hover:text-blue-400" data-translate="contact">Contatti</a>
+        <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded" data-translate="downloadCV">Visualizza CV</a>
+      </nav>
     </div>
   </header>
 
@@ -104,7 +115,7 @@
   <section id="skills" class="py-20 bg-gray-950 text-white" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-10" data-translate="competenze">💻 Competenze Tecniche</h3>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
 
         <a href="https://easyeda.com" target="_blank"
           class="bg-gray-800 p-4 rounded-xl shadow hover:bg-gray-700 transition flex items-center justify-center gap-2">
@@ -226,21 +237,23 @@
     <div class="max-w-7xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-10" data-translate="experienceTitle">💼 Esperienze Lavorative</h3>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer"
-          onclick="window.open('esperienza1_IT.html','_blank')">
-          <img src="assets/img/IDG01.png" alt="IDG01" class="w-full h-48 object-contain rounded mb-4" />
-          <h4 class="text-lg font-semibold" data-translate="idg">IDG01 – Robotica Indoor</h4>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer"
-          onclick="window.open('esperienza2_IT.html','_blank')">
-          <img src="assets/img/ALBAROBOT.png" alt="ALBA Robot" class="w-full h-48 object-contain rounded mb-4" />
-          <h4 class="text-lg font-semibold" data-translate="alba">ALBA Robot – Progettazione</h4>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer"
-          onclick="window.open('esperienza3_IT.html','_blank')">
-          <img src="assets/img/cooming_soon.png" alt="In Arrivo" class="w-full h-48 object-contain rounded mb-4" />
-          <h4 class="text-lg font-semibold" data-translate="arrivo">In Arrivo…</h4>
-        </div>
+        <a href="esperienza1_IT.html" target="_blank"
+        class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
+       <img src="assets/img/IDG01.png" alt="IDG01" class="w-full h-48 object-contain rounded mb-4" />
+       <h4 class="text-lg font-semibold" data-translate="idg">IDG01 – Robotica Indoor</h4>
+     </a>
+
+        <a href="esperienza2_IT.html" target="_blank"
+        class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
+        <img src="assets/img/ALBAROBOT.png" alt="ALBA Robot" class="w-full h-48 object-contain rounded mb-4" />
+        <h4 class="text-lg font-semibold" data-translate="alba">ALBA Robot – Progettazione</h4>
+      </a>
+
+      <a href="esperienza3_IT.html" target="_blank"
+      class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
+      <img src="assets/img/cooming_soon.png" alt="In Arrivo" class="w-full h-48 object-contain rounded mb-4" />
+      <h4 class="text-lg font-semibold" data-translate="arrivo">In Arrivo…</h4>
+    </a>
       </div>
     </div>
   </section>

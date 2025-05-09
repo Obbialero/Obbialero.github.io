@@ -63,8 +63,8 @@ modal.addEventListener('click', (e) => {
 });
 
 
-// Carosello progetti
 document.addEventListener('DOMContentLoaded', () => {
+  // Carosello progetti
   const track = document.querySelector('.project-carousel-track');
   const slides = Array.from(track.children);
   const prevBtn = document.getElementById('project-prev');
@@ -72,10 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIdx = 0;
 
   function getStep() {
-    const style = window.getComputedStyle(slides[0]);
-    const width = slides[0].getBoundingClientRect().width;
-    const margin = parseFloat(style.marginRight);
-    return width + margin;
+    const slide = slides[0];
+    return slide.getBoundingClientRect().width;
   }
 
   function updateCarousel() {
@@ -94,10 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   updateCarousel();
-});
-
-// Carosello immagini interne
-document.addEventListener('DOMContentLoaded', () => {
+  
+  // Carosello immagini interne
   document.querySelectorAll('.project-slide').forEach(slide => {
     const wrapper = slide.querySelector('.carousel-wrapper');
     const track = wrapper.querySelector('.carousel-track');
@@ -165,4 +161,9 @@ document.querySelectorAll('header nav a[href^="#"]').forEach(anchor => {
       behavior: 'smooth'
     });
   });
+});
+
+document.getElementById('menu-toggle').addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
 });

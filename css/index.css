@@ -68,8 +68,9 @@ body {
   }
   
   .project-slide {
-    flex: 0 0 calc(100% - 4rem);
-    margin-right: 1rem;
+    flex: 0 0 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
   #project-prev {
@@ -151,4 +152,19 @@ body {
       font-size: 1.25rem;
     }
   }
+
+  #map {
+    max-width: 100%;
+    overflow: hidden;
+  }
   
+  .cert-image {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  #skills .bg-gray-800:active {
+    background-color: #2563eb; /* colore blu più acceso */
+    transform: scale(0.97);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* anello blu */
+  }
