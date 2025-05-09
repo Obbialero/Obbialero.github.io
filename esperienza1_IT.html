@@ -17,6 +17,13 @@
 </head>
 
 <body class="bg-gray-950 text-white">
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
   <!-- Navbar -->
   <header class="fixed w-full z-20 bg-gray-950 bg-opacity-90 backdrop-blur-sm shadow-sm" role="banner">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -26,7 +33,7 @@
       </div>
       <nav class="hidden md:flex items-center space-x-4 text-sm" role="navigation">
         <a href="#esperienza" class="hover:text-blue-400">Esperienza</a>
-        <a href="#skills" class="hover:text-blue-400">Skills</a>
+        <a href="#skills" class="hover:text-blue-400">Competenze</a>
         <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded" data-translate="downloadCV">Visualizza CV</a>
         <select id="languageSelect" class="bg-transparent text-blue-400 border border-blue-400 rounded px-2 py-1">
           <option value="it">IT</option>
@@ -55,29 +62,47 @@
     </h1>
 
     <div class="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800 p-8 rounded-3xl shadow-2xl max-w-4xl mx-auto" data-aos="fade-up">
-      <div class="flex items-center mb-6 space-x-4">
-        <h2 id="idg" class="text-3xl font-semibold text-blue-400">
-          <a href="https://www.idg01.com" target="_blank" class="hover:underline">
-            IDG Elettrogruppo Zerouno (2019-2020)
-          </a>
+      <div class="flex flex-col md:flex-row items-center justify-between mb-8">
+        <h2 class="text-3xl font-semibold text-blue-400 text-center md:text-left">
+          <a href="https://www.idg01.com" target="_blank" class="hover:underline">IDG Elettrogruppo Zerouno</a>
+          <span class="block text-sm text-gray-400 mt-1">(2019-2020)</span>
         </h2>
-        <img src="assets/img/IDG01_1.png" alt="Logo IDG Elettrogruppo Zerouno" class="w-24 h-auto object-contain" data-aos="fade-left" />
+        <img src="assets/img/IDG01_1.png" alt="Logo IDG Elettrogruppo Zerouno" class="w-24 h-24 md:w-32 md:h-32 object-contain" />
       </div>
+      
       <ul class="text-lg text-gray-300 space-y-4 leading-relaxed">
         <li><span class="font-semibold text-white">Ruolo:</span> Banconista</li>
         <li><span class="font-semibold text-white">Attività:</span>
-          <ul class="list-disc ml-6 mt-2 space-y-2">
-            <li>Gestione della componentistica elettrica</li>
-            <li>Supporto tecnico ai clienti</li>
-            <li>Consulenza nella scelta di materiali elettrici</li>
-          </ul>
+          <ul class="text-lg text-gray-300 space-y-4 leading-relaxed">
+            <li><span class="font-semibold text-white">Ruolo:</span> Banconista Elettronico</li>
+            <li><span class="font-semibold text-white">Attività principali:</span>
+              <ul class="list-disc ml-6 mt-2 space-y-2">
+                <li>Gestione del banco: rifornimento, pulizia e organizzazione della componentistica elettrica.</li>
+                <li>Assistenza tecnica e consulenza ai clienti su prodotti elettrici e loro applicazioni.</li>
+                <li>Gestione delle transazioni e dei sistemi di pagamento.</li>
+                <li>Controllo dell'inventario e segnalazione dei rifornimenti necessari.</li>
+                <li>Collaborazione con il team per l’organizzazione del punto vendita.</li>
+                <li>Studio delle caratteristiche dei prodotti per fornire informazioni accurate.</li>
+              </ul>
+            </li>
+            <li><span class="font-semibold text-white">Competenze acquisite:</span>
+              <ul class="list-disc ml-6 mt-2 space-y-2">
+                <li>Servizio clienti personalizzato e professionale.</li>
+                <li>Comunicazione efficace con clienti e colleghi.</li>
+                <li>Organizzazione e gestione del tempo.</li>
+                <li>Precisione nella gestione delle scorte e dei dettagli tecnici.</li>
+                <li>Capacità di problem solving in situazioni complesse.</li>
+              </ul>
+            </li>
+            <li><span class="font-semibold text-white">Ambienti di lavoro:</span> Punto vendita di materiale elettrico specializzato per impianti civili e industriali.</li>
+          </ul>          
         </li>
         <li>Esperienza significativa nel relazionarsi con il pubblico e comprendere esigenze tecniche complesse.</li>
       </ul>
     </div>
 
     <section id="skills" class="mt-16 max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold text-center mb-8 text-blue-400" data-aos="fade-up">⚡ Skills sviluppate</h2>
+      <h2 class="text-3xl font-semibold text-center mb-8 text-blue-400" data-aos="fade-up">⚡ Competenze sviluppate</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="skill-card" data-aos="zoom-in">
           <h3>Conoscenza Componentistica</h3>

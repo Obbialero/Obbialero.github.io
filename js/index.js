@@ -38,7 +38,8 @@ document.querySelectorAll('.cert-image').forEach(img => {
     // Usa il nome del file PNG per ricavare il path PDF
     modalDownload.href = img.src
     .replace('assets/img/attestati/', 'assets/pdf/')
-    .replace('.png', '.pdf');
+    .replace('.png', '.pdf')
+    .replace(/ /g, '_');
 
     modal.classList.remove('hidden');
   });
