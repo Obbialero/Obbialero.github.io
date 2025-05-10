@@ -45,5 +45,11 @@
   "scarica1": "Upload Certification",
   "invio": "Send",
   "footer": "© 2025 Andrea Obbialero – Junior Hardware Engineer. All rights reserved.",
-  "send":"send"
+  "send":"send",
+  "descrizione1": "Cybersecurity course, skills in protecting and monitoring IT systems.",
+  "descrizione2": "Excel and Power Query course for Data Analysis.",
+  "descrizione3": "Google Ads for Beginners on Coursera.",
+  "descrizione4": "Build a Free Website with WordPress.",
+  "descrizione5": "Foundations of 3D Modeling course.",
+  "descrizione6": "PCB Design Essentials. Using EasyEDA and KiCad."
 }

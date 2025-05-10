@@ -13,6 +13,14 @@ function loadTranslations(lang) {
           el.textContent = translations[key];
         }
       });
+
+      // 🔽 Nuovo blocco per tradurre le descrizioni
+      document.querySelectorAll("[data-description-key]").forEach(el => {
+        const key = el.getAttribute("data-description-key");
+        if (translations[key]) {
+          el.setAttribute("data-description", translations[key]);
+        }
+      });
     })
     .catch(error => console.error("Errore nel caricamento delle traduzioni:", error));
 }

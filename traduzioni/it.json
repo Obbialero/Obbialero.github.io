@@ -1,6 +1,5 @@
 
 {
-
 "title": "Andrea Obbialero – Soluzioni Digitali",
 "Navbar": "Andrea Obbialero",
 "home":"Home",
@@ -47,5 +46,12 @@
 "scarica1":"carica Certificazione",
 "invio":"Invia",
 "footer":" © 2025 Andrea Obbialero – Junior Hardware Engineer. Tutti i diritti riservati.",
-"send":"Invia"
+"send":"Invia",
+"descrizione1": "Corso di Sicurezza Informatica, Competenze in protezione e monitoraggio dei sistemi informatici.",
+"descrizione2": "Corso Excel e Power Query per la Data Analysis.",
+"descrizione3": "Google Ads for Beginners su Coursera.",
+"descrizione4": "Build a Free Website with WordPress.",
+"descrizione5": "Corso Fondamenti di Modellazione 3D.",
+"descrizione6": "PCB Design Essentials. Utilizzo di Easyeda e Kicad."
+
 }
