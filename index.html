@@ -23,49 +23,60 @@
     <img src="assets/img/LOGO2.png" class="w-1/2 h-auto opacity-100 blur-sm" alt="Logo sfondo">
   </div>
 
-  <!-- Navbar -->
-  <header class="fixed w-full z-30 bg-gray-950 bg-opacity-95 shadow-lg">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <header class="fixed top-0 left-0 w-full z-30 bg-gray-950/95 shadow-lg">
+    <div class="relative max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- logo/title… -->
       <div class="flex items-center gap-3">
-        <img src="assets/img/LOGO2.png" alt="Logo AO" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
+        <img src="assets/img/LOGO2.png" alt="Andrea Obbialero logo" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
         <h1 class="text-xl font-bold">Andrea Obbialero</h1>
       </div>
-      <nav class="hidden md:flex gap-6 text-sm items-center">
-        <a href="#home" class="hover:text-blue-400" data-translate="home"></a>
-        <a href="#about" class="hover:text-blue-400" data-translate="about"></a>
-        <a href="#skills" class="hover:text-blue-400" data-translate="skills"></a>
-        <a href="#education" class="hover:text-blue-400" data-translate="study"></a>
-        <a href="#experience" class="hover:text-blue-400" data-translate="experience"></a>
-        <a href="#projects" class="hover:text-blue-400" data-translate="project"></a>
-        <a href="#certificazioni" class="hover:text-blue-400" data-translate="certification"></a>
-        <a href="#contact" class="hover:text-blue-400" data-translate="contact"></a>
-        <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded" data-translate="downloadCV"></a>
-        <select id="languageSelect" class="bg-transparent text-blue-400 border border-blue-400 rounded px-3 py-2">
+      <!-- Mobile toggle (now stays on top) -->
+      <button id="menu-toggle" class="md:hidden text-blue-400 z-50" aria-label="Toggle menu" aria-controls="site-nav"
+        aria-expanded="false">☰</button>
+
+      <!-- Single nav for both desktop & mobile -->
+      <nav id="site-nav" class="
+        hidden            /* hide by default on mobile */
+        md:flex           /* show as flex on md+ */
+        flex              /* needed so that when un-hidden on mobile it’s a flex container */
+        flex-col          /* stack links on mobile */
+        md:flex-row       /* row on desktop */
+        items-center gap-6
+        bg-gray-900 md:bg-transparent
+        p-6 md:p-0
+        absolute top-full left-0 w-full  /* drop-down below header */
+        md:static               /* revert to normal on md+ */
+        z-40
+      " role="navigation" aria-label="Main navigation" style="max-width: none;">
+        <a href="#home" class="block md:inline hover:text-blue-400">Home</a>
+        <a href="#about" class="block md:inline hover:text-blue-400">About</a>
+        <a href="#skills" class="block md:inline hover:text-blue-400">Skills</a>
+        <a href="#education" class="block md:inline hover:text-blue-400">Education</a>
+        <a href="#experience" class="block md:inline hover:text-blue-400">Experience</a>
+        <a href="#projects" class="block md:inline hover:text-blue-400">Projects</a>
+        <a href="#certificazioni" class="block md:inline hover:text-blue-400">Certifications</a>
+        <a href="#contact" class="block md:inline hover:text-blue-400">Contact</a>
+        <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank"
+          class="block md:inline bg-green-600 hover:bg-green-500 px-4 py-2 rounded">Download CV</a>
+        <select id="languageSelect" aria-label="Language"
+          class="block md:inline bg-transparent text-blue-400 border border-blue-400 rounded px-3 py-2">
           <option value="it">IT</option>
           <option value="en">EN</option>
         </select>
-      </nav>
-      <button id="menu-toggle" class="md:hidden text-blue-400" aria-label="Apri menu">☰</button>
-      <nav id="mobile-menu" class="md:hidden fixed top-16 left-0 right-0 bg-gray-900 flex flex-col items-center gap-4 py-4 hidden z-40">
-        <a href="#home" class="hover:text-blue-400" data-translate="home"></a>
-        <a href="#about" class="hover:text-blue-400" data-translate="about"></a>
-        <a href="#skills" class="hover:text-blue-400" data-translate="skills"></a>
-        <a href="#education" class="hover:text-blue-400" data-translate="study"></a>
-        <a href="#experience" class="hover:text-blue-400" data-translate="experience"></a>
-        <a href="#projects" class="hover:text-blue-400" data-translate="project"></a>
-        <a href="#certificazioni" class="hover:text-blue-400" data-translate="certification"></a>
-        <a href="#contact" class="hover:text-blue-400" data-translate="contact"></a>
-        <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded" data-translate="downloadCV"></a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="home" class="relative min-h-screen flex items-center justify-center px-4 pt-24 text-center overflow-hidden" data-aos="fade-up">
+  <section id="home"
+    class="relative min-h-screen flex items-center justify-center px-4 pt-24 text-center overflow-hidden"
+    data-aos="fade-up">
     <div class="relative z-10">
       <h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-white" data-translate="hero1"></h2>
       <p class="text-lg text-gray-300 mb-8" data-translate="hero2"></p>
-      <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-6 px-10 rounded-xl" data-translate="hero3"></a>
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-6 px-10 rounded-xl"
+        data-translate="hero3"></a>
     </div>
   </section>
 
@@ -94,7 +105,7 @@
       <button id="send-btn" style="color: rgb(30, 255, 0);" data-translate="invio">Invia</button>
     </div>
   </div>
-  
+
   <!-- Competenze Tecniche -->
   <section id="skills" class="py-20 bg-gray-950 text-white" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-4">
@@ -208,202 +219,205 @@
       <h3 class="text-3xl font-bold text-center mb-10" data-translate="experienceTitle"></h3>
       <div class="grid md:grid-cols-3 gap-6">
         <a href="esperienza1_IT.html" target="_blank"
-        class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
-       <img src="assets/img/IDG01.png" alt="IDG01" class="w-full h-48 object-contain rounded mb-4" />
-       <h4 class="text-lg font-semibold" data-translate="idg"></h4>
-     </a>
+          class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
+          <img src="assets/img/IDG01.png" alt="IDG01" class="w-full h-48 object-contain rounded mb-4" />
+          <h4 class="text-lg font-semibold" data-translate="idg"></h4>
+        </a>
 
         <a href="esperienza2_IT.html" target="_blank"
-        class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
-        <img src="assets/img/ALBAROBOT.png" alt="ALBA Robot" class="w-full h-48 object-contain rounded mb-4" />
-        <h4 class="text-lg font-semibold" data-translate="alba"></h4>
-      </a>
+          class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
+          <img src="assets/img/ALBAROBOT.png" alt="ALBA Robot" class="w-full h-48 object-contain rounded mb-4" />
+          <h4 class="text-lg font-semibold" data-translate="alba"></h4>
+        </a>
 
-      <a href="esperienza3_IT.html" target="_blank"
-      class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
-      <img src="assets/img/cooming_soon.png" alt="In Arrivo" class="w-full h-48 object-contain rounded mb-4" />
-      <h4 class="text-lg font-semibold" data-translate="arrivo"></h4>
-    </a>
+        <a href="esperienza3_IT.html" target="_blank"
+          class="bg-gray-800 p-6 rounded-xl hover:scale-105 hover:bg-blue-600 transition cursor-pointer block">
+          <img src="assets/img/cooming_soon.png" alt="In Arrivo" class="w-full h-48 object-contain rounded mb-4" />
+          <h4 class="text-lg font-semibold" data-translate="arrivo"></h4>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Progetti -->
-  <div id="projects" class="py-20 bg-gray-900 text-white" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto px-4 relative overflow-hidden">
+  <div id="projects" class="py-20 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-10" data-translate="progetti"></h3>
-
-      <button id="project-prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-white text-3xl z-20">
-        ‹
-      </button>
-      <button id="project-next" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-3xl z-20">
-        ›
-      </button>
-
-      <div class="project-carousel-track flex transition-transform duration-500">
-        <div class="project-slide flex-shrink-0 w-full px-4">
-          <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-            <div class="carousel-wrapper relative overflow-hidden">
-              <div class="carousel-track flex transition-transform duration-500">
-                <div class="carousel-item flex-shrink-0 w-full">
-                  <img src="https://picsum.photos/400/200?random=6" alt="">
+      <div class="flex items-center">
+        <button id="project-prev" class="text-white text-3xl px-2 focus:outline-none">
+          ‹
+        </button>
+        <div class="flex-1 overflow-hidden">
+          <div class="project-carousel-track flex transition-transform duration-500">
+            <div class="project-slide flex-shrink-0 w-full px-4">
+              <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div class="carousel-wrapper relative overflow-hidden">
+                  <div class="carousel-track flex transition-transform duration-500">
+                    <div class="carousel-item flex-shrink-0 w-full">
+                      <img src="https://picsum.photos/400/200?random=6" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-dots flex justify-center mt-2"></div>
+                <div class="px-6 py-5">
+                  <a href="https://github.com/Obbialero/Adjustable-bench-power-supply-0V-30V" target="_blank"
+                    class="inline-flex items-center text-blue-400 hover:underline">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="GitHub" class="w-5 h-5 mr-2" data-translate="gith">
+                    <h4 class="text-xl font-semibold mb-2" data-translate="progetto1"></h4>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="carousel-dots flex justify-center mt-2"></div>
-            <div class="px-6 py-5">
-              <h4 class="text-xl font-semibold mb-2" data-translate="progetto1"></h4>
-              <a href="https://github.com/Obbialero/Adjustable-bench-power-supply-0V-30V" target="_blank"
-                class="inline-flex items-center text-blue-400 hover:underline">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
-                  class="w-5 h-5 mr-2" data-translate="gith">
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="project-slide flex-shrink-0 w-full px-4">
-          <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-            <div class="carousel-wrapper relative overflow-hidden">
-              <div class="carousel-track flex transition-transform duration-500">
-                <div class="carousel-item flex-shrink-0 w-full">
-                  <img src="https://picsum.photos/400/200?random=9" alt="">
+            <div class="project-slide flex-shrink-0 w-full px-4">
+              <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div class="carousel-wrapper relative overflow-hidden">
+                  <div class="carousel-track flex transition-transform duration-500">
+                    <div class="carousel-item flex-shrink-0 w-full">
+                      <img src="https://picsum.photos/400/200?random=9" alt="">
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full">
+                      <img src="https://picsum.photos/400/200?random=1" alt="">
+                    </div>
+                  </div>
                 </div>
-                <div class="carousel-item flex-shrink-0 w-full">
-                  <img src="https://picsum.photos/400/200?random=1" alt="">
+                <div class="carousel-dots flex justify-center mt-2"></div>
+                <div class="px-6 py-5">
+                  <a href="https://github.com/Obbialero/IoT-Weather-Station-with-STM32L432KC" target="_blank"
+                    class="inline-flex items-center text-blue-400 hover:underline">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="GitHub" class="w-5 h-5 mr-2" data-translate="gith">
+                    <h4 class="text-xl font-semibold mb-2" data-translate="progetto2"></h4>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="carousel-dots flex justify-center mt-2"></div>
-            <div class="px-6 py-5">
-              <h4 class="text-xl font-semibold mb-2" data-translate="progetto2"></h4>
-              <a href="https://github.com/Obbialero/IoT-Weather-Station-with-STM32L432KC" target="_blank"
-                class="inline-flex items-center text-blue-400 hover:underline">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
-                  class="w-5 h-5 mr-2" data-translate="gith">
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="project-slide flex-shrink-0 w-full px-4">
-          <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-            <div class="carousel-wrapper relative overflow-hidden">
-              <div class="carousel-track flex transition-transform duration-500">
-                <div class="carousel-item flex-shrink-0 w-full">
-                  <img src="https://picsum.photos/400/200?random=7" alt="">
+            <div class="project-slide flex-shrink-0 w-full px-4">
+              <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div class="carousel-wrapper relative overflow-hidden">
+                  <div class="carousel-track flex transition-transform duration-500">
+                    <div class="carousel-item flex-shrink-0 w-full">
+                      <img src="https://picsum.photos/400/200?random=7" alt="">
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full">
+                      <img src="https://picsum.photos/400/200?random=8" alt="">
+                    </div>
+                  </div>
                 </div>
-                <div class="carousel-item flex-shrink-0 w-full">
-                  <img src="https://picsum.photos/400/200?random=8" alt="">
+                <div class="carousel-dots flex justify-center mt-2"></div>
+                <div class="px-6 py-5">
+                  <a href="https://github.com/Obbialero/BLE-WIFI-Telemetry-module-with-ESP32-S2" target="_blank"
+                    class="inline-flex items-center text-blue-400 hover:underline">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="GitHub" class="w-5 h-5 mr-2" data-translate="gith">
+                    <h4 class="text-xl font-semibold mb-2" data-translate="progetto3"></h4>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="carousel-dots flex justify-center mt-2"></div>
-            <div class="px-6 py-5">
-              <h4 class="text-xl font-semibold mb-2" data-translate="progetto3"></h4>
-              <a href="https://github.com/Obbialero/BLE-WIFI-Telemetry-module-with-ESP32-S2" target="_blank"
-                class="inline-flex items-center text-blue-400 hover:underline">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
-                  class="w-5 h-5 mr-2" data-translate="gith">
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="project-slide flex-shrink-0 w-full px-4">
-          <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-            <div class="carousel-wrapper relative overflow-hidden">
-              <div class="carousel-track flex transition-transform duration-500">
-                <div class="carousel-item flex-shrink-0 w-full">
-                  <img src="https://picsum.photos/400/200?random=13" alt="">
+            <div class="project-slide flex-shrink-0 w-full px-4">
+              <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div class="carousel-wrapper relative overflow-hidden">
+                  <div class="carousel-track flex transition-transform duration-500">
+                    <div class="carousel-item flex-shrink-0 w-full">
+                      <img src="https://picsum.photos/400/200?random=13" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-dots flex justify-center mt-2"></div>
+                <div class="px-6 py-5">
+                  <a href="https://github.com/Obbialero/Custom-FDM-3D-Printer" target="_blank"
+                    class="inline-flex items-center text-blue-400 hover:underline">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="GitHub" class="w-5 h-5 mr-2" data-translate="gith">
+                    <h4 class="text-xl font-semibold mb-2" data-translate="progetto4"></h4>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="carousel-dots flex justify-center mt-2"></div>
-            <div class="px-6 py-5">
-              <h4 class="text-xl font-semibold mb-2" data-translate="progetto4"></h4>
-              <a href="https://github.com/Obbialero/Custom-FDM-3D-Printer" target="_blank"
-                class="inline-flex items-center text-blue-400 hover:underline">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
-                  class="w-5 h-5 mr-2" data-translate="gith">
-              </a>
-            </div>
           </div>
         </div>
+        <button id="project-next" class="text-white text-3xl px-2 focus:outline-none">
+          ›
+        </button>
       </div>
     </div>
   </div>
 
-<!-- Certificazioni -->
-<section id="certificazioni" class="py-28 bg-gray-950 text-white" data-aos="fade-up">
-  <div class="max-w-7xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-16" data-translate="certificazioni"></h3>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+  <!-- Certificazioni -->
+  <section id="certificazioni" class="py-28 bg-gray-950 text-white" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-16" data-translate="certificazioni"></h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
 
-      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
-        <img src="assets/img/attestati/Introduzione_alla_sicurezza_informatica.png" alt="Sicurezza Informatica"
-          class="w-full h-48 object-cover cert-image"
-          data-description-key="descrizione1"
-          data-description="Corso di Sicurezza Informatica, Competenze in protezione e monitoraggio dei sistemi informatici." />
-        <div class="p-4 text-center font-semibold" data-translate="certificato1"></div>
+        <div
+          class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+          <img src="assets/img/attestati/Introduzione_alla_sicurezza_informatica.png" alt="Sicurezza Informatica"
+            class="w-full h-48 object-cover cert-image" data-description-key="descrizione1"
+            data-description="Corso di Sicurezza Informatica, Competenze in protezione e monitoraggio dei sistemi informatici." />
+          <div class="p-4 text-center font-semibold" data-translate="certificato1"></div>
+        </div>
+
+        <div
+          class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+          <img src="assets/img/attestati/Excel_e_Power_Query.png" alt="Excel & Power Query"
+            class="w-full h-48 object-cover cert-image" data-description-key="descrizione2"
+            data-description="Corso Excel e Power Query per la Data Analysis." />
+          <div class="p-4 text-center font-semibold">Excel & Power Query</div>
+        </div>
+
+        <div
+          class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+          <img src="assets/img/attestati/Google_Ads_for_beginners.png" alt="Google Ads Basics"
+            class="w-full h-48 object-cover cert-image" data-description-key="descrizione3"
+            data-description="Google Ads for Beginners su Coursera." />
+          <div class="p-4 text-center font-semibold">Google Ads Basics</div>
+        </div>
+
+        <div
+          class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+          <img src="assets/img/attestati/Build_a_free_website_with_WordPress.png" alt="WordPress Website"
+            class="w-full h-48 object-cover cert-image" data-description-key="descrizione4"
+            data-description="Build a Free Website with WordPress." />
+          <div class="p-4 text-center font-semibold">WordPress Website</div>
+        </div>
+
+        <div
+          class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+          <img src="assets/img/attestati/Fondamenti_di_Modellazione_3D.png" alt="Modellazione 3D"
+            class="w-full h-48 object-cover cert-image" data-description-key="descrizione5"
+            data-description="Corso Fondamenti di Modellazione 3D." />
+          <div class="p-4 text-center font-semibold" data-translate="certificato5"></div>
+        </div>
+
+        <div
+          class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
+          <img src="assets/img/attestati/PCB_Design.png" alt="PCB Design – Mahara"
+            class="w-full h-48 object-cover cert-image" data-description-key="descrizione6"
+            data-description="PCB Design Essentials. Utilizzo di Easyeda e Kicad" />
+          <div class="p-4 text-center font-semibold">PCB Design – Mahara</div>
+        </div>
+
       </div>
+    </div>
+  </section>
 
-      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
-        <img src="assets/img/attestati/Excel_e_Power_Query.png" alt="Excel & Power Query"
-          class="w-full h-48 object-cover cert-image"
-          data-description-key="descrizione2"
-          data-description="Corso Excel e Power Query per la Data Analysis." />
-        <div class="p-4 text-center font-semibold">Excel & Power Query</div>
+  <!-- Modale Certificati -->
+  <div id="certModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+    <div class="bg-gray-900 rounded-lg p-6 relative max-w-lg w-full">
+      <button id="modalClose" class="absolute top-2 right-2 text-white text-xl font-bold">&times;</button>
+      <img id="modalImage" src="" alt="Certificato" class="w-full mb-4 rounded" />
+      <p id="modalDescription" class="text-white mb-4"></p>
+      <div class="flex justify-center">
+        <a id="modalDownload" href="#" target="_blank" rel="noopener noreferrer"
+          class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded" data-translate="visualizzacertificato">
+        </a>
       </div>
-
-      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
-        <img src="assets/img/attestati/Google_Ads_for_beginners.png" alt="Google Ads Basics"
-          class="w-full h-48 object-cover cert-image"
-          data-description-key="descrizione3"
-          data-description="Google Ads for Beginners su Coursera." />
-        <div class="p-4 text-center font-semibold">Google Ads Basics</div>
-      </div>
-
-      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
-        <img src="assets/img/attestati/Build_a_free_website_with_WordPress.png" alt="WordPress Website"
-          class="w-full h-48 object-cover cert-image"
-          data-description-key="descrizione4"
-          data-description="Build a Free Website with WordPress." />
-        <div class="p-4 text-center font-semibold">WordPress Website</div>
-      </div>
-
-      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
-        <img src="assets/img/attestati/Fondamenti_di_Modellazione_3D.png" alt="Modellazione 3D"
-          class="w-full h-48 object-cover cert-image"
-          data-description-key="descrizione5"
-          data-description="Corso Fondamenti di Modellazione 3D." />
-        <div class="p-4 text-center font-semibold" data-translate="certificato5"></div>
-      </div>
-
-      <div class="bg-gray-800 hover:bg-blue-600 rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition cursor-pointer">
-        <img src="assets/img/attestati/PCB_Design.png" alt="PCB Design – Mahara"
-          class="w-full h-48 object-cover cert-image"
-          data-description-key="descrizione6"
-          data-description="PCB Design Essentials. Utilizzo di Easyeda e Kicad" />
-        <div class="p-4 text-center font-semibold">PCB Design – Mahara</div>
-      </div>
-
     </div>
   </div>
-</section>
-
-<!-- Modale Certificati -->
-<div id="certModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
-  <div class="bg-gray-900 rounded-lg p-6 relative max-w-lg w-full">
-    <button id="modalClose" class="absolute top-2 right-2 text-white text-xl font-bold">&times;</button>
-    <img id="modalImage" src="" alt="Certificato" class="w-full mb-4 rounded" />
-    <p id="modalDescription" class="text-white mb-4"></p>
-    <div class="flex justify-center">
-      <a id="modalDownload" href="#" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded" data-translate="visualizzacertificato">
-      </a>           
-    </div>
-  </div>
-</div>
 
 
   <!-- Contatti -->
@@ -414,8 +428,10 @@
         <h3 class="text-3xl font-bold" data-translate="contactTitle">Contattami</h3>
         <input type="text" name="name" placeholder="Nome" required class="w-full bg-gray-800 p-3 rounded text-white">
         <input type="email" name="email" placeholder="Email" required class="w-full bg-gray-800 p-3 rounded text-white">
-        <textarea name="message" rows="5" placeholder="Messaggio..." required class="w-full bg-gray-800 p-3 rounded text-white"></textarea>
-        <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white py-3 px-6 rounded w-full" data-translate="send"></button>
+        <textarea name="message" rows="5" placeholder="Messaggio..." required
+          class="w-full bg-gray-800 p-3 rounded text-white"></textarea>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white py-3 px-6 rounded w-full"
+          data-translate="send"></button>
       </form>
 
       <!-- Social + mappa -->
@@ -433,7 +449,8 @@
             <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/brands/github.svg"
               alt="GitHub" class="socialSvg w-6 h-6" />
           </a>
-          <a href="https://linkedin.com/in/andrea-obbialero-713552217" class="socialContainer containerThree" title="LinkedIn" target="_blank">
+          <a href="https://linkedin.com/in/andrea-obbialero-713552217" class="socialContainer containerThree"
+            title="LinkedIn" target="_blank">
             <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/brands/linkedin.svg"
               alt="LinkedIn" class="socialSvg w-6 h-6" />
           </a>
@@ -458,4 +475,5 @@
   <script src="js/index.js"></script>
   <script src="chat/script.js"></script>
 </body>
+
 </html>

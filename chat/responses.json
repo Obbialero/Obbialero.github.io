@@ -1,5 +1,5 @@
 {
-  "messaggio_iniziale": "Ciao! Sono Andrea Obbialero, un Junior Hardware Engineer appassionato di elettronica e veicoli autonomi.",
+  "messaggio_iniziale": "Ciao! Sono il bot di Andrea Obbialero. Fammi pure qualsiasi domanda sul mio curriculum, cercherò di rispondere al meglio.",
   "ciao": "Ciao! Come posso aiutarti?",
   "come stai": "Sto bene, grazie! E tu?",
   "grazie": "È un piacere aiutarti! Chiedi pure se hai altre domande.",
@@ -10,5 +10,15 @@
   "competenze": "Progetto circuiti, analizzo datasheet, uso software come AutoCAD, Eagle, LabView, e gestisco progetti hardware.",
   "software": "Uso software come EasyEDA, AutoCAD, Eagle, Multisim, LabView, e altri per progettazione e simulazione.",
   "formazione": "Ho il diploma in elettronica ed elettrotecnica e corsi su Project Management e sicurezza informatica.",
-  "certificazione":"<br><br>Clicca il seguente link: <a href='#certificazioni'><u>Certificazioni</u></a>"
+  "certificazione":"<br><br>Clicca il seguente link: <a href='#certificazioni'><u>Certificazioni</u></a>",
+  "home":"<br><br>Clicca il seguente link: <a href='#home'><u>home</u></a>",  
+  "chi sei":"<br><br>Clicca il seguente link: <a href='##about'><u>chi sono</u></a>",
+  "skills":"<br><br>Clicca il seguente link: <a href='#skills'><u>skills</u></a>",
+  "titolo di studio":"<br><br>Clicca il seguente link: <a href='#education'><u>titolo di studio</u></a>",
+  "esperienze lavorative":"<br><br>Clicca il seguente link: <a href='#experience'><u>esperiene lavorative</u></a>",
+  "progetti":"<br><br>Clicca il seguente link: <a href='#projects'><u>projects</u></a>",
+  "contatti":"<br><br>Clicca il seguente link: <a href='#contact'><u>contatti</u></a>",
+  "CV":"<br><br>Clicca il seguente link: <a href='assets/pdf/CV_Andrea_Obbialero.pdf'><u>CV</u></a>",
+  "Alba robot":"<br><br>Clicca il seguente link: <a href='esperienza2_IT.html'><u>Alba Robot</u></a>",
+  "Idg":"<br><br>Clicca il seguente link: <a href='esperienza1_IT.html'><u>IDG</u></a>"
 }

@@ -171,7 +171,15 @@ document.querySelectorAll('header nav a[href^="#"]').forEach(anchor => {
   });
 });
 
-document.getElementById('menu-toggle').addEventListener('click', () => {
-  const menu = document.getElementById('mobile-menu');
-  menu.classList.toggle('hidden');
+// document.getElementById('menu-toggle').addEventListener('click', () => {
+//   const menu = document.getElementById('mobile-menu');
+//   menu.classList.toggle('hidden');
+// });
+
+const btn = document.getElementById('menu-toggle');
+const nav = document.getElementById('site-nav');
+btn.addEventListener('click', () => {
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!expanded));
+  nav.classList.toggle('hidden');
 });
