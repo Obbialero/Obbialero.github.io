@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esperienza 2 - Alba Robot</title>
+  <title data-translate="title3"></title>
 
   <!-- Tailwind CSS & Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,9 +25,9 @@
         <h1 class="text-xl font-bold" data-translate="Navbar">Andrea Obbialero</h1>
       </div>
       <nav class="hidden md:flex items-center space-x-4 text-sm">
-        <a href="#esperienza" class="hover:text-blue-400">Esperienza</a>
-        <a href="#skills" class="hover:text-blue-400">Competenze</a>
-        <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded" data-translate="downloadCV">Visualizza CV</a>
+        <a href="#esperienza" class="hover:text-blue-400" data-translate="esperienza"></a>
+        <a href="#skills" class="hover:text-blue-400" data-translate="competenze1"></a>
+        <a href="assets/pdf/CV_Andrea_Obbialero.pdf" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded" data-translate="downloadCV"></a>
         <select id="languageSelect" class="bg-transparent text-blue-400 border border-blue-400 rounded px-2 py-1">
           <option value="it">IT</option>
           <option value="en">EN</option>
@@ -37,8 +37,8 @@
     </div>
 
     <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white px-4 pb-4 space-y-2">
-      <a href="#esperienza" class="block">Esperienza</a>
-      <a href="#skills" class="block">Competenze</a>
+      <a href="#esperienza" class="block" data-translate="esperienza"></a>
+      <a href="#skills" class="block" data-translate="competenze1"></a>
       <a href="../assets/pdf/CV_Andrea_Obbialero.pdf" download class="w-full bg-green-500 hover:bg-green-400 text-white font-bold py-2 rounded">
         Scarica CV
       </a>
@@ -52,53 +52,51 @@
   <!-- Contenuto -->
   <main class="pt-32 container mx-auto px-4 py-12">
     <!-- Esperienza -->
-    <h1 id="esperienza" class="text-4xl md:text-5xl font-bold text-center mb-12" data-aos="fade-down">Esperienza Lavorativa</h1>
+    <h1 id="esperienza" class="text-4xl md:text-5xl font-bold text-center mb-12" data-aos="fade-down"data-translate="esperienza lavorativa"></h1>
 
     <div class="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800 p-10 rounded-3xl shadow-2xl max-w-4xl mx-auto" data-aos="fade-up">
       <div class="flex flex-col md:flex-row items-center justify-between mb-8">
         <h2 class="text-3xl font-semibold text-blue-400 text-center md:text-left">
-          <a href="https://www.alba-robot.com/it" target="_blank" class="hover:underline">Alba Robot</a>
+          <a href="https://www.alba-robot.com/it" target="_blank" class="hover:underline" data-translate="Alba Robot"></a>
         </h2>
         <img src="assets/img/alba.png" alt="Logo Alba Robot" class="w-24 h-24 md:w-32 md:h-32 object-contain" />
       </div>
-      <p class="text-gray-300 mb-8 leading-relaxed text-center md:text-left">
-        ALBA Robot è un'azienda specializzata nello sviluppo di veicoli a guida autonoma per ambienti indoor...
-      </p>
+      <p class="text-gray-300 mb-8 leading-relaxed text-center md:text-left" data-translate="descrizione Alba Robot" ></p>
 
       <hr class="my-8 border-gray-600">
 
       <div class="bg-gray-700 p-6 rounded-2xl shadow-md mb-8">
-        <h3 class="text-2xl font-bold text-white mb-2">🛠️ Junior Hardware Engineer</h3>
-        <p class="text-sm text-gray-400 mb-4">Luglio 2021 - Dicembre 2023</p>
+        <h3 class="text-2xl font-bold text-white mb-2">🚀 Hardware Manager</h3>
+        <p class="text-sm text-gray-400 mb-4" data-translate="Anno di lavoro2"></p>
         <ul class="list-disc ml-6 text-gray-300 space-y-2 leading-relaxed">
-          <li>Progettazione di schemi elettrici (master)</li>
-          <li>Progettazione di circuiti stampati (PCB)</li>
-          <li>Selezione e validazione di componenti elettronici</li>
+          <li data-translate="skil alba4"></li>
+          <li data-translate="skil alba5"></li>
+          <li data-translate="skil alba6"></li>
         </ul>
       </div>
 
-      <div class="bg-gray-700 p-6 rounded-2xl shadow-md">
-        <h3 class="text-2xl font-bold text-white mb-2">🚀 Hardware Manager</h3>
-        <p class="text-sm text-gray-400 mb-4">Gennaio 2024 - Presente</p>
+      <div class="bg-gray-700 p-6 rounded-2xl shadow-md mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2" data-translate="Junior Hardware Engineer"></h3>
+        <p class="text-sm text-gray-400 mb-4" data-translate="Anno di lavoro1"></p>
         <ul class="list-disc ml-6 text-gray-300 space-y-2 leading-relaxed">
-          <li>Gestione fornitori</li>
-          <li>Validazione hardware</li>
-          <li>Gestione di un team</li>
+          <li data-translate="skil alba1"></li>
+          <li data-translate="skil alba2"></li>
+          <li data-translate="skil alba3"></li>
         </ul>
       </div>
     </div>
 
     <!-- Competenze -->
     <section id="skills" class="mt-16 max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold text-center mb-8 text-blue-400" data-aos="fade-up">⚡ Competenze sviluppate</h2>
+      <h2 class="text-3xl font-semibold text-center mb-8 text-blue-400" data-aos="fade-up" data-translate="competenze sviluppate"></h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="skill-card" data-aos="zoom-in"><h3>Progettazione Elettrica</h3><p>Schemi elettrici e PCB</p></div>
-        <div class="skill-card" data-aos="zoom-in"><h3>Sbrogli Elettrici</h3><p>Ottimizzazione tracciati</p></div>
-        <div class="skill-card" data-aos="zoom-in"><h3>Lettura Datasheet</h3><p>Analisi tecnica componenti</p></div>
-        <div class="skill-card" data-aos="zoom-in"><h3>Comunicazione</h3><p>Gestione team e clienti</p></div>
-        <div class="skill-card" data-aos="zoom-in"><h3>Problem Solving</h3><p>Risolvere problemi tecnici</p></div>
-        <div class="skill-card" data-aos="zoom-in"><h3>Cablaggio Elettrico</h3><p>Connessioni su prototipi</p></div>
-        <div class="skill-card" data-aos="zoom-in"><h3>Meccanica</h3><p>Conoscenze base meccaniche</p></div>
+        <div class="skill-card" data-aos="zoom-in"><h3 data-translate="competenze2"></h3><p data-translate="competenze2 descrizione"></p></div>
+        <div class="skill-card" data-aos="zoom-in"><h3 data-translate="competenze3"></h3><p data-translate="competenze3 descrizione"></p></div>
+        <div class="skill-card" data-aos="zoom-in"><h3 data-translate="competenze4"></h3><p data-translate="competenze4 descrizione"></p></div>
+        <div class="skill-card" data-aos="zoom-in"><h3 data-translate="competenze5"></h3><p data-translate="competenze5 descrizione"></p></div>
+        <div class="skill-card" data-aos="zoom-in"><h3 data-translate="competenze6"></h3><p data-translate="competenze6 descrizione"></p></div>
+        <div class="skill-card" data-aos="zoom-in"><h3 data-translate="competenze7"></h3><p data-translate="competenze7 descrizione"></p></div>
+        <div class="skill-card" data-aos="zoom-in"><h3 data-translate="competenze8"></h3><p data-translate="competenze8 descrizione"></p></div>
       </div>
     </section>
 
@@ -120,7 +118,7 @@
   <!-- Footer -->
   <footer class="text-center py-6 text-gray-400 bg-gray-950 text-sm flex items-center justify-center gap-3">
     <img src="assets/img/LOGO2.png" alt="Logo AO" class="w-6 h-6 object-contain" />
-    © 2025 Andrea Obbialero – Junior Hardware Engineer. Tutti i diritti riservati.
+    <a data-translate="footer"> </a>
   </footer>
 
   <!-- Scripts -->

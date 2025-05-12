@@ -28,3 +28,33 @@ document.querySelectorAll('header nav a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+// Traduzioni
+function loadTranslations(lang) {
+  const translationsUrl = lang === 'en' ? 'traduzioni/en.json' : 'traduzioni/it.json';
+  fetch(translationsUrl)
+    .then(response => response.json())
+    .then(translations => {
+      document.querySelectorAll("[data-translate]").forEach(el => {
+        const key = el.getAttribute("data-translate");
+        if (translations[key]) {
+          el.textContent = translations[key];
+        }
+      });
+
+      // 🔽 Nuovo blocco per tradurre le descrizioni
+      document.querySelectorAll("[data-description-key]").forEach(el => {
+        const key = el.getAttribute("data-description-key");
+        if (translations[key]) {
+          el.setAttribute("data-description", translations[key]);
+        }
+      });
+    })
+    .catch(error => console.error("Errore nel caricamento delle traduzioni:", error));
+}
+
+document.getElementById("languageSelect").addEventListener("change", function () {
+  const lang = this.value;
+  loadTranslations(lang);
+});
+loadTranslations('it');
