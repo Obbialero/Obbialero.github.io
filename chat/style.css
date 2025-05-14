@@ -59,6 +59,11 @@
   border: 2px solid black; 
 }
 
+#chatbox.hidden {
+  display: none !important;
+  pointer-events: none;
+}
+
 #chatbox.show {
   opacity: 1;
   transform: translateY(0);

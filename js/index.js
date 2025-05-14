@@ -31,24 +31,29 @@ document.getElementById("languageSelect").addEventListener("change", function ()
 });
 loadTranslations('it');
 
-// Modale certificati
-const modal = document.getElementById('certModal');
+// grab your modal nodes once
+const modal      = document.getElementById('certModal');
 const modalImage = document.getElementById('modalImage');
-const modalDescription = document.getElementById('modalDescription');
-const modalDownload = document.getElementById('modalDownload');
-const modalClose = document.getElementById('modalClose');
+const modalDesc  = document.getElementById('modalDescription');
+const modalDL    = document.getElementById('modalDownload');
 
-document.querySelectorAll('.cert-image').forEach(img => {
-  img.addEventListener('click', () => {
+// for every card…
+document.querySelectorAll('.cert-card').forEach(card => {
+  card.addEventListener('click', () => {
+    // find the <img> inside it
+    const img = card.querySelector('.cert-image');
+
+    // populate modal
     modalImage.src = img.src;
-    modalDescription.textContent = img.dataset.description;
+    modalDesc.textContent = img.dataset.description;
 
-    // Usa il nome del file PNG per ricavare il path PDF
-    modalDownload.href = img.src
-    .replace('assets/img/attestati/', 'assets/pdf/')
-    .replace('.png', '.pdf')
-    .replace(/ /g, '_');
+    // build the PDF URL from the PNG filename
+    modalDL.href = img.src
+      .replace('assets/img/attestati/', 'assets/pdf/')
+      .replace('.png', '.pdf')
+      .replace(/ /g, '_');
 
+    // show it
     modal.classList.remove('hidden');
   });
 });
