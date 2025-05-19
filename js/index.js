@@ -32,10 +32,10 @@ document.getElementById("languageSelect").addEventListener("change", function ()
 loadTranslations('it');
 
 // grab your modal nodes once
-const modal      = document.getElementById('certModal');
+const modal = document.getElementById('certModal');
 const modalImage = document.getElementById('modalImage');
-const modalDesc  = document.getElementById('modalDescription');
-const modalDL    = document.getElementById('modalDownload');
+const modalDesc = document.getElementById('modalDescription');
+const modalDL = document.getElementById('modalDownload');
 
 // for every card…
 document.querySelectorAll('.cert-card').forEach(card => {
@@ -77,36 +77,54 @@ modal.addEventListener('click', (e) => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Carosello progetti
+  // Outer projects carousel
   const track = document.querySelector('.project-carousel-track');
   const slides = Array.from(track.children);
   const prevBtn = document.getElementById('project-prev');
   const nextBtn = document.getElementById('project-next');
+  const container = document.querySelector('.project-carousel-container');
   let currentIdx = 0;
+  let projectTimer;
 
   function getStep() {
-    const slide = slides[0];
-    return slide.getBoundingClientRect().width;
+    return slides[0].getBoundingClientRect().width;
   }
 
   function updateCarousel() {
-    const step = getStep();
-    track.style.transform = `translateX(-${currentIdx * step}px)`;
+    track.style.transform = `translateX(-${currentIdx * getStep()}px)`;
   }
 
+  function nextProject() {
+    currentIdx = (currentIdx + 1) % slides.length;
+    updateCarousel();
+  }
+
+  function resetProjectTimer() {
+    clearInterval(projectTimer);
+    projectTimer = setInterval(nextProject, 3000);
+  }
+
+  // Prev/Next buttons
   prevBtn.addEventListener('click', () => {
     currentIdx = Math.max(0, currentIdx - 1);
     updateCarousel();
+    resetProjectTimer();
   });
-
   nextBtn.addEventListener('click', () => {
     currentIdx = Math.min(slides.length - 1, currentIdx + 1);
     updateCarousel();
+    resetProjectTimer();
   });
 
+  // Pause on hover, resume on leave
+  container.addEventListener('mouseenter', () => clearInterval(projectTimer));
+  container.addEventListener('mouseleave', resetProjectTimer);
+
+  // Start auto-advance
   updateCarousel();
-  
-  // Carosello immagini interne
+  projectTimer = setInterval(nextProject, 3000);
+
+  // Inner-carousel code unchanged
   document.querySelectorAll('.project-slide').forEach(slide => {
     const wrapper = slide.querySelector('.carousel-wrapper');
     const track = wrapper.querySelector('.carousel-track');
@@ -114,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsCon = slide.querySelector('.carousel-dots');
     let current = 0, timer;
 
+    // build dots
     items.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.className = 'w-2 h-2 rounded-full mx-1 bg-gray-400 focus:outline-none';
