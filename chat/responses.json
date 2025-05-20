@@ -1,24 +1,170 @@
 {
-  "messaggio_iniziale": "Ciao! Sono il bot di Andrea Obbialero. Fammi pure qualsiasi domanda sul mio curriculum, cercherò di rispondere al meglio.",
-  "ciao": "Ciao! Come posso aiutarti?",
-  "come stai": "Sto bene, grazie! E tu?",
-  "grazie": "È un piacere aiutarti! Chiedi pure se hai altre domande.",
-  "addio": "A presto! Buona giornata!",
-  "certificazioni": "Ho alcune certificazioni come 'PCB Design Essentials' e un corso in 'Sicurezza Informatica'.",
-  "eta": "Ho 22 anni, sono nato nel 2002.",
-  "aziende": "Lavoro in ALBA Robot dal 2021 come Hardware Menager, e ho fatto uno stage in IDG 01 S.p.A. nel 2018.",
-  "competenze": "Progetto circuiti, analizzo datasheet, uso software come AutoCAD, Eagle, LabView, e gestisco progetti hardware.",
-  "software": "Uso software come EasyEDA, AutoCAD, Eagle, Multisim, LabView, e altri per progettazione e simulazione.",
-  "formazione": "Ho il diploma in elettronica ed elettrotecnica e corsi su Project Management e sicurezza informatica.",
-  "certificazione":"<br><br>Clicca il seguente link: <a href='#certificazioni'><u>Certificazioni</u></a>",
-  "home":"<br><br>Clicca il seguente link: <a href='#home'><u>home</u></a>",  
-  "chi sei":"<br><br>Clicca il seguente link: <a href='##about'><u>chi sono</u></a>",
-  "skills":"<br><br>Clicca il seguente link: <a href='#skills'><u>skills</u></a>",
-  "titolo di studio":"<br><br>Clicca il seguente link: <a href='#education'><u>titolo di studio</u></a>",
-  "esperienze lavorative":"<br><br>Clicca il seguente link: <a href='#experience'><u>esperiene lavorative</u></a>",
-  "progetti":"<br><br>Clicca il seguente link: <a href='#projects'><u>projects</u></a>",
-  "contatti":"<br><br>Clicca il seguente link: <a href='#contact'><u>contatti</u></a>",
-  "CV":"<br><br>Clicca il seguente link: <a href='assets/pdf/CV_Andrea_Obbialero.pdf'><u>CV</u></a>",
-  "Alba robot":"<br><br>Clicca il seguente link: <a href='esperienza2_IT.html'><u>Alba Robot</u></a>",
-  "Idg":"<br><br>Clicca il seguente link: <a href='esperienza1_IT.html'><u>IDG</u></a>"
+  "messaggio_iniziale": {
+    "synonyms": ["messaggio iniziale", "introduzione", "inizio conversazione", "avvio bot", "primo messaggio"],
+    "response": "Ciao! Sono il bot di Andrea Obbialero. Fammi pure qualsiasi domanda sul mio curriculum, cercherò di rispondere al meglio."
+  },
+  "ciao": {
+    "synonyms": ["ciao", "salve", "buongiorno", "buonasera", "hey", "pronto"],
+    "response": "Ciao! Come posso aiutarti?"
+  },
+  "come stai": {
+    "synonyms": ["come stai", "come va", "come va la vita", "tutto bene", "come ti senti"],
+    "response": "Sto bene, grazie! E tu?"
+  },
+  "grazie": {
+    "synonyms": ["grazie", "grazie mille", "grazie tante", "ti ringrazio", "molto gentile"],
+    "response": "È un piacere aiutarti! Chiedi pure se hai altre domande."
+  },
+  "addio": {
+    "synonyms": ["addio", "arrivederci", "a presto", "ci sentiamo", "ciao ciao"],
+    "response": "A presto! Buona giornata!"
+  },
+  "eta": {
+    "synonyms": ["eta", "età", "anni", "quanti anni hai", "quando sei nato"],
+    "response": "Ho 22 anni, sono nato nel 2002."
+  },
+  "aziende": {
+    "synonyms": ["aziende", "in quali aziende hai lavorato", "dove hai lavorato", "esperienze professionali", "società"],
+    "response": "Lavoro in ALBA Robot dal 2021 come Hardware Menager, e ho fatto uno stage in IDG 01 S.p.A. nel 2018."
+  },
+  "competenze": {
+    "synonyms": ["competenze", "cosa sai fare", "abilità", "skill", "capacità"],
+    "response": "Progetto circuiti, analizzo datasheet, uso software come AutoCAD, Eagle, LabView, e gestisco progetti hardware."
+  },
+  "software": {
+    "synonyms": ["software", "programmi", "quali software usi", "strumenti"],
+    "response": "Uso software come EasyEDA, AutoCAD, Eagle, Multisim, LabView, e altri per progettazione e simulazione."
+  },
+  "formazione": {
+    "synonyms": ["formazione", "studi", "educazione", "titolo di studio", "percorsi di studio"],
+    "response": "Ho il diploma in elettronica ed elettrotecnica e corsi su Project Management e sicurezza informatica."
+  },
+  "certificazione": {
+    "synonyms": ["certificazione", "certificato", "attestato", "link certificazioni"],
+    "response": "<br><br>Clicca il seguente link: <a href='#certificazioni'><u>Certificazioni</u></a>"
+  },
+  "home": {
+    "synonyms": ["home", "pagina principale", "torna alla home", "start", "inizio"],
+    "response": "<br><br>Clicca il seguente link: <a href='#home'><u>home</u></a>"
+  },
+  "chi sei": {
+    "synonyms": ["chi sei", "chi sei tu", "parlami di te", "presentati", "descriviti"],
+    "response": "<br><br>Clicca il seguente link: <a href='##about'><u>chi sono</u></a>"
+  },
+  "skills": {
+    "synonyms": ["skills", "abilità", "competenze", "skill set"],
+    "response": "<br><br>Clicca il seguente link: <a href='#skills'><u>skills</u></a>"
+  },
+  "titolo di studio": {
+    "synonyms": ["titolo di studio", "diploma", "laurea", "qualifica", "istruzione"],
+    "response": "<br><br>Clicca il seguente link: <a href='#education'><u>titolo di studio</u></a>"
+  },
+  "esperienze lavorative": {
+    "synonyms": ["esperienze lavorative", "esperienze professionali", "esperienze", "storia lavorativa"],
+    "response": "<br><br>Clicca il seguente link: <a href='#experience'><u>esperiene lavorative</u></a>"
+  },
+  "progetti": {
+    "synonyms": ["progetti", "portfolio", "cosa hai realizzato", "lavori", "progetti in corso"],
+    "response": "<br><br>Clicca il seguente link: <a href='#projects'><u>projects</u></a>"
+  },
+  "contatti": {
+    "synonyms": ["contatti", "recapiti", "dati di contatto", "info contatti", "come contattarti"],
+    "response": "<br><br>Clicca il seguente link: <a href='#contact'><u>contatti</u></a>"
+  },
+  "CV": {
+    "synonyms": ["cv", "curriculum", "curriculum vitae", "scarica cv", "il mio cv"],
+    "response": "<br><br>Clicca il seguente link: <a href='assets/pdf/CV_Andrea_Obbialero.pdf'><u>CV</u></a>"
+  },
+  "Alba robot": {
+    "synonyms": ["Alba Robot", "esperienza Alba Robot", "lavoro Alba Robot", "azienda Alba Robot", "ALBA Robot"],
+    "response": "<br><br>Clicca il seguente link: <a href='esperienza2_IT.html'><u>Alba Robot</u></a>"
+  },
+  "Idg": {
+    "synonyms": ["IDG", "Idg", "IDG Elettrogruppo Zerouno", "esperienza IDG", "stage IDG"],
+    "response": "<br><br>Clicca il seguente link: <a href='esperienza1_IT.html'><u>IDG</u></a>"
+  },
+  "nome completo": {
+    "synonyms": ["nome completo", "come ti chiami", "nome e cognome", "tuo nome"],
+    "response": "Andrea Obbialero"
+  },
+  "ruolo attuale": {
+    "synonyms": ["ruolo attuale", "posizione attuale", "che ruolo ricopri", "attuale ruolo"],
+    "response": "Hardware Manager"
+  },
+  "ruolo precedente": {
+    "synonyms": ["ruolo precedente", "posizione precedente", "precedente ruolo", "ruolo passato"],
+    "response": "Junior Hardware Engineer"
+  },
+  "dove lavori": {
+    "synonyms": ["dove lavori", "in quale azienda lavori", "luogo di lavoro", "attuale azienda"],
+    "response": "ALBA Robot"
+  },
+  "inizio Alba Robot": {
+    "synonyms": ["inizio Alba Robot", "quando hai iniziato in Alba Robot", "data inizio Alba Robot"],
+    "response": "Luglio 2021"
+  },
+  "promozione manager": {
+    "synonyms": ["promozione manager", "quando sei diventato manager", "data promozione manager", "promosso a manager"],
+    "response": "Gennaio 2024"
+  },
+  "attività Alba Robot": {
+    "synonyms": ["attività Alba Robot", "cosa fai in Alba Robot", "mansioni in Alba Robot", "compiti in Alba Robot"],
+    "response": "Fornitori, validazione, team"
+  },
+  "stage presso": {
+    "synonyms": ["stage presso", "tirocinio presso", "dove hai fatto lo stage", "stage in"],
+    "response": "IDG Elettrogruppo Zerouno"
+  },
+  "anno stage": {
+    "synonyms": ["anno stage", "quando è stato lo stage", "data stage", "anno del tirocinio"],
+    "response": "2018"
+  },
+  "attività IDG": {
+    "synonyms": ["attività IDG", "cosa facevi in IDG", "mansioni in IDG", "compiti IDG"],
+    "response": "Componenti, assistenza, problem solving, relazioni"
+  },
+  "corsi extra": {
+    "synonyms": ["corsi extra", "corsi aggiuntivi", "formazione extra", "ulteriori corsi"],
+    "response": "Project Management; Sicurezza Informatica"
+  },
+  "certificazioni": {
+    "synonyms": ["certificazioni", "che certificazioni hai", "attestati", "certificati"],
+    "response": "Sicurezza Informatica; PCB Design Essentials; Excel & Power Query; Google Ads; WordPress; Modellazione 3D"
+  },
+  "email": {
+    "synonyms": ["email", "indirizzo email", "mail", "posta elettronica"],
+    "response": "obbialeroandrea@gmail.com"
+  },
+  "github": {
+    "synonyms": ["github", "profilo github", "account github", "repository"],
+    "response": "github.com/Obbialero"
+  },
+  "linkedin": {
+    "synonyms": ["linkedin", "profilo linkedin", "account linkedin"],
+    "response": "linkedin.com/in/andrea-obbialero-713552217"
+  },
+  "età": {
+    "synonyms": ["età", "anni", "quanti anni hai", "la tua età", "data di nascita"],
+    "response": "22 anni"
+  },
+  "anno di nascita": {
+    "synonyms": ["anno di nascita", "quando sei nato", "data di nascita", "nato il"],
+    "response": "2002"
+  },
+  "competenze principali": {
+    "synonyms": ["competenze principali", "abilità principali", "skill principali", "punti di forza"],
+    "response": "PCB design; datasheet; cablaggio; meccanica"
+  },
+  "software principali": {
+    "synonyms": ["software principali", "programmi principali", "strumenti principali", "tool principali"],
+    "response": "EasyEDA; AutoCAD; Eagle; Multisim; LabView"
+  },
+  "come contattarti": {
+    "synonyms": ["come contattarti", "come posso contattarti", "modalità di contatto", "metodi di contatto"],
+    "response": "Email o form contatti"
+  },
+  "stato progetti": {
+    "synonyms": ["stato progetti", "stato dei progetti", "aggiornamento progetti", "progetti in aggiornamento"],
+    "response": "Sezione in aggiornamento"
+  }
 }
